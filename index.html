@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="gerador de senhas, gerador password"> <!--meta tag para ajudar no SEO da aplicação em pesquisas no Google com palavras-chaves-->
+  <meta name="description" content="gerador de senhas de 5 a 25 caracteres totalmente aleatório"> <!--meta tag de descrição do conteúdo da aplicação-->
+  <link rel="stylesheet" href="style.css">
+  <title>Gerador de senhas</title>
+</head>
+<body>
+  
+  <img class="logo" src="./assets/logo.png" alt="gerador de senhas logo"> <!--logo da aplicação-->
+
+  <main class="container-input"> <!--area principal da aplicação-->
+    <h2>Tamanho <span id="valor"></span> Caracteres</h2> <!--subtitulo-->
+    <input id="slider" class="slider" type="range" min="5" max="25" value="15"> <!--barra para especificar quantos caracteres vai ter a senha-->
+    <button id="button" class="button-cta" onclick="generatePassword()">Gerar senha</button> <!--butão gerador de senha-->
+  </main>
+
+  <div id="container-password" class="container-password hide" onclick="copyPassword()"> <!--area segundaria da aplicação-->
+    <h2 class="title">Sua senha gerada foi:</h2> <!--subtitulo-->
+    <span id="password" class="password"></span> <!--senha que será gerada aleatoriamente-->
+    <span class="tooltip">Clique aqui para copiar.👆</span> <!--popup que aparecerá de forma dinâmica quando o mause estiver passando por cima da senha gerada-->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
